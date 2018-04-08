@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0CB87A0E-FE44-4A9C-B7FB-3592DF6ADAD6}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>PP</RootNamespace>
-    <AssemblyName>PP</AssemblyName>
+    <ProjectGuid>{011434C1-5FD5-4307-81F2-58C25D6676FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RoundRobin</RootNamespace>
+    <AssemblyName>RoundRobin</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,7 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,28 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="RoundRobin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GanttChart\GanttChart.csproj">
-      <Project>{bec0a9ad-a443-4ad9-b950-d8c42b484ac9}</Project>
-      <Name>GanttChart</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PriorityScheduling\PriorityScheduling.csproj">
-      <Project>{dfc3582c-3bb4-4f41-bacc-63faa5996fb3}</Project>
-      <Name>PriorityScheduling</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Process\Process.csproj">
       <Project>{993e2b7c-9676-463a-b729-3b63e7669ee5}</Project>
       <Name>Process</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RoundRobin\RoundRobin.csproj">
-      <Project>{011434c1-5fd5-4307-81f2-58c25d6676fe}</Project>
-      <Name>RoundRobin</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
